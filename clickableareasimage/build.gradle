@@ -68,6 +68,6 @@ afterEvaluate {
         }
     }
 
-//    ./gradlew  publishReleasePublicationToMavenLocal
+//    ./gradlew publishReleasePublicationToMavenLocal
 
 }
