@@ -21,6 +21,7 @@ import com.mukulbhardwaj1313.clickableareasimage.OnClickableAreaClickedListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import mukulbhardwaj1313.imageclickable.R;
 import uk.co.senab.photoview.PhotoViewAttacher;
 
 
