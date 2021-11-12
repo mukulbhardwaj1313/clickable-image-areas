@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="entries" >
+        <item>Split</item>
+        <item>Chest Freezer</item>
+        <item>Water Cooler</item>
+        <item>Visi Cooler</item>
+        <item>Bottom Mount Ref</item>
+        <item>Window</item>
+    </string-array>
+</resources>
