@@ -24,7 +24,6 @@ import java.util.List;
 import mukulbhardwaj1313.imageclickable.R;
 import uk.co.senab.photoview.PhotoViewAttacher;
 
-
 public class MainActivity extends AppCompatActivity implements OnClickableAreaClickedListener<State> {
 
 //    private double multiplicationFactor = 1.0;
