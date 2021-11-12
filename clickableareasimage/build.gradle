@@ -47,7 +47,7 @@ afterEvaluate {
 
                 // You can then customize attributes of the publication as shown below.
                 groupId = 'com.mukulbhardwaj1313.imageClickableAreas'
-                artifactId = 'final'
+                artifactId = 'v'
                 version = '1.0.3'
 //
             }
