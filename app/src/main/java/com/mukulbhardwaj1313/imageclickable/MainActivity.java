@@ -22,7 +22,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import mukulbhardwaj1313.imageclickable.R;
-import uk.co.senab.photoview.PhotoViewAttacher;
 
 public class MainActivity extends AppCompatActivity implements OnClickableAreaClickedListener<State> {
 
@@ -56,42 +55,42 @@ public class MainActivity extends AppCompatActivity implements OnClickableAreaCl
                     case "Chest Freezer" : {
                         image.setImageResource(R.drawable.chestfreezer);
                         clickableAreas = getClickableAreasCFCCGSL();
-                        ClickableAreasImage clickableAreasImage = new ClickableAreasImage(new PhotoViewAttacher(image), MainActivity.this);
+                        ClickableAreasImage clickableAreasImage = new ClickableAreasImage(image, MainActivity.this);
                         clickableAreasImage.setClickableAreas(clickableAreas);
                         break;
                     }
                     case "Water Cooler" : {
                         image.setImageResource(R.drawable.watercooler);
                         clickableAreas = getClickableAreasWaterCooler();
-                        ClickableAreasImage clickableAreasImage = new ClickableAreasImage(new PhotoViewAttacher(image), MainActivity.this);
+                        ClickableAreasImage clickableAreasImage = new ClickableAreasImage(image, MainActivity.this);
                         clickableAreasImage.setClickableAreas(clickableAreas);
                         break;
                     }
                     case "Visi Cooler" : {
                         image.setImageResource(R.drawable.visicooler);
                         clickableAreas = getClickableAreasVisiCooler();
-                        ClickableAreasImage clickableAreasImage = new ClickableAreasImage(new PhotoViewAttacher(image), MainActivity.this);
+                        ClickableAreasImage clickableAreasImage = new ClickableAreasImage(image, MainActivity.this);
                         clickableAreasImage.setClickableAreas(clickableAreas);
                         break;
                     }
                     case "Bottom Mount Ref" : {
                         image.setImageResource(R.drawable.ffgasleaks);
                         clickableAreas = getffGasLeakClickableAreas();
-                        ClickableAreasImage clickableAreasImage = new ClickableAreasImage(new PhotoViewAttacher(image), MainActivity.this);
+                        ClickableAreasImage clickableAreasImage = new ClickableAreasImage(image, MainActivity.this);
                         clickableAreasImage.setClickableAreas(clickableAreas);
                         break;
                     }
                     case "Window" : {
                         image.setImageResource(R.drawable.window_ac);
                         clickableAreas = getClickableAreas();
-                        ClickableAreasImage clickableAreasImage = new ClickableAreasImage(new PhotoViewAttacher(image), MainActivity.this);
+                        ClickableAreasImage clickableAreasImage = new ClickableAreasImage(image, MainActivity.this);
                         clickableAreasImage.setClickableAreas(clickableAreas);
                         break;
                     }
                     case "Split" : {
                         image.setImageResource(R.drawable.gas_charging_img);
                         clickableAreas = getClickableAreas();
-                        ClickableAreasImage clickableAreasImage = new ClickableAreasImage(new PhotoViewAttacher(image), MainActivity.this);
+                        ClickableAreasImage clickableAreasImage = new ClickableAreasImage(image, MainActivity.this);
                         clickableAreasImage.setClickableAreas(clickableAreas);
 
                         break;
@@ -105,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements OnClickableAreaCl
             public void onNothingSelected(AdapterView<?> parent) {
                 image.setImageResource(R.drawable.gas_charging_img);
                 clickableAreas = getClickableAreas();
-                ClickableAreasImage clickableAreasImage = new ClickableAreasImage(new PhotoViewAttacher(image), MainActivity.this);
+                ClickableAreasImage clickableAreasImage = new ClickableAreasImage(image, MainActivity.this);
                 clickableAreasImage.setClickableAreas(clickableAreas);
             }
 

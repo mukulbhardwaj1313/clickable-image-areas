@@ -6,30 +6,34 @@ import android.os.Build;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.github.chrisbanes.photoview.OnPhotoTapListener;
+import com.github.chrisbanes.photoview.PhotoViewAttacher;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import uk.co.senab.photoview.PhotoViewAttacher;
 
 
-public class ClickableAreasImage implements PhotoViewAttacher.OnPhotoTapListener{
+public class ClickableAreasImage implements OnPhotoTapListener {
 
     private PhotoViewAttacher attacher;
     private OnClickableAreaClickedListener listener;
 
+    private ImageView imageView;
     private List<ClickableArea> clickableAreas;
 
     private int imageWidthInPx;
     private int imageHeightInPx;
 
-    public ClickableAreasImage(PhotoViewAttacher attacher, OnClickableAreaClickedListener listener){
-        this.attacher = attacher;
+    public ClickableAreasImage(ImageView imageView, OnClickableAreaClickedListener listener){
+        this.imageView = imageView;
+        this.attacher = new PhotoViewAttacher(imageView);
         init(listener);
     }
 
     private void init(OnClickableAreaClickedListener listener) {
         this.listener = listener;
-        getImageDimensions(attacher.getImageView());
+        getImageDimensions(imageView);
         attacher.setOnPhotoTapListener(this);
     }
 
@@ -50,7 +54,7 @@ public class ClickableAreasImage implements PhotoViewAttacher.OnPhotoTapListener
         
 
     @Override
-    public void onPhotoTap(View view, float x, float y) {
+    public void onPhotoTap(ImageView view, float x, float y) {
         PixelPosition pixel = ImageUtils.getPixelPosition(x, y, imageWidthInPx, imageHeightInPx);
         List<ClickableArea> clickableAreas = getClickAbleAreas(pixel.getX(), pixel.getY());
         for(ClickableArea ca : clickableAreas){
